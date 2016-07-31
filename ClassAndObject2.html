@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Object Oriented Javascript - Object using literal notation</title>
+</head>
+<body>
+    
+        <script type="text/javascript">
+        //Javascript is Object Oriented programming language.
+        //but in javascript we dont have concept of class instead we have functions
+        //There are two ways to create the object in javascript
+        //1.using constructor function
+        //2.using Object literal
+        //Creating the object using Literal notation
+
+            var student = {
+                firstName: "Mahesh",
+                lastName: "Patil",
+                getFullName: function () {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+
+        //Call the class methods
+
+        document.write("FirstName = " + student.firstName + "<br/>");
+        document.write("LastName = " + student.lastName + "<br/>");
+        document.write("FullName = " + student.getFullName() + "<br/>");
+        </script>
+    
+</body>
+</html>
