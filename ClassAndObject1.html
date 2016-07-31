@@ -1,0 +1,33 @@
+<html>
+<body>
+    <script type="text/javascript">
+        //Javascript is Object Oriented programming language.
+        //but in javascript we dont have concept of class instead we have functions
+        //There are two ways to create the object in javascript
+        //1.using constructor function
+        //2.using Object literal
+        //Creating the object using constructor function
+
+        function Student(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            //member function
+
+            this.getFullName = function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        //Creat the object
+
+        var student = new Student("Mahesh", "Patil");
+
+        //Call the class methods
+
+        document.write("FirstName = " + student.firstName + "<br/>");
+        document.write("LastName = " + student.lastName + "<br/>");
+        document.write("FullName = " + student.getFullName() + "<br/>");
+    </script>
+</body>
+</html>
