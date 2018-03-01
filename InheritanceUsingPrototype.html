@@ -1,0 +1,46 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        //Employee Class :  Parent class
+        function Employee(firstName, lastName) {
+
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            this.getName = function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        //Permanent Employee Class : Child class
+
+        function PermanentEmployee(annualSalary) {
+            this.annualSalary = annualSalary;
+
+            this.getSalary = function () {
+
+                return annualSalary;
+            }
+
+        }
+
+        var employee = new Employee("Mahesh", "Patil");
+
+        //Here actually we are telling PermanentEmployee class that employee is the parent class
+
+        PermanentEmployee.prototype = employee;
+
+        var permanentEmployee = new PermanentEmployee(500000);
+
+        document.write("FullName : " + permanentEmployee.getName());
+
+    </script>
+</body>
+
+</html>
